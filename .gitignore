@@ -1,0 +1,6 @@
+/.gradle/
+/.frontend-gradle-plugin/
+/.idea/
+/.node/
+/build/
+**/node_modules
