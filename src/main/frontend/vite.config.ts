@@ -15,11 +15,16 @@ export default defineConfig({
   },
   plugins: [vue()],
   build: {
-    outDir: '../../build/dist',
+    outDir: '../../../build/dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        nested: resolve(__dirname, 'somemodule/subindex.html'),
+        vue_app: resolve(__dirname, 'index.html'),
+        sub_app: resolve(__dirname, 'somemodule/subindex.html'),
+      },
+      output: {
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`
       }
     },
   }

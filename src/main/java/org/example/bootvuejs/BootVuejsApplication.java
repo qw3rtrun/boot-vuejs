@@ -20,7 +20,7 @@ public class BootVuejsApplication {
 class HelloThymeleafController {
 
     @GetMapping(path = "/thymeleaf")
-    public String thymleaf(Model model) {
+    public String thymeleaf(Model model) {
         model.addAttribute("name", "Thymeleaf");
         return "hellothymeleaf";
     }

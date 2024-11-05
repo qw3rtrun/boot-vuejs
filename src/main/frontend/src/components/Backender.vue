@@ -12,6 +12,7 @@ custom().then(data => name.value = data.name)
     <p>
       {{ name }}
     </p>
+    <a href="/thymeleaf">Check Thymeleaf Template</a>
   </div>
 
 </template>
