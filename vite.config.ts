@@ -14,12 +14,13 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
+  root: "./src/main/ts",
   build: {
     outDir: '../../../build/dist',
     rollupOptions: {
       input: {
-        vue_app: resolve(__dirname, 'index.html'),
-        sub_app: resolve(__dirname, 'somemodule/subindex.html'),
+        vue_app: resolve(__dirname, 'src/main/ts/index.html'),
+        sub_app: resolve(__dirname, 'src/main/ts/somemodule/subindex.html'),
       },
       output: {
         entryFileNames: `assets/[name].js`,
